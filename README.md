@@ -6,15 +6,19 @@ para GitHub Pages.
 
 ## Contenido pendiente de completar
 
-- **Fotos reales**: reemplazar los 6 `<div class="foto-ph">` de la sección
-  "Trabajos realizados" por `<img>` reales con `alt` descriptivo, ej.:
+- **Más fotos**: la galería tiene 3 fotos reales (`fotos/`), recortadas de las
+  fotos originales de Mercado Libre para sacar la franja de marca del pie
+  (esas ya la tienen incorporada, pensada para el flyer, no para esta grilla).
+  El spec permite hasta 6 — para agregar una nueva:
   ```html
-  <img src="fotos/tablero-martinez.jpg" alt="Instalación de tablero eléctrico en Martínez">
+  <img src="fotos/nombre-descriptivo.jpg" alt="Descripción real de la foto">
   ```
-  Mantené `object-fit: cover` (ya está en `.galeria img`).
+  Conviene optimizar cada foto antes de subirla (mismo criterio que las
+  actuales: recorte a ~900px de ancho, JPEG calidad ~80) para no pesar la
+  carga inicial.
 - **og-image.png**: hoy es un placeholder generado (blueprint con el texto "BONA").
-  Cuando haya fotos reales de trabajos, conviene reemplazarlo por una imagen real
-  de 1200×630px para que se vea mejor al compartir en WhatsApp/Instagram.
+  Se puede reemplazar por una de las fotos reales de trabajo (1200×630px) para
+  que se vea mejor al compartir en WhatsApp/Instagram.
 
 ## Deploy a GitHub Pages
 
