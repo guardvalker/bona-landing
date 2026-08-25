@@ -4,322 +4,454 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>BONA Electricidad — Electricista matriculado en La Lucila, Martínez y zona norte</title>
-<meta name="description" content="Electricista matriculado COPIME N3 en La Lucila, Martínez, Olivos y Vicente López. Instalaciones, reparaciones, plomería y domótica a domicilio.">
+<meta name="description" content="Gonzalo Bonavena, electricista matriculado COPIME N3 en La Lucila, Martínez, Olivos y Vicente López. Instalaciones, reparaciones, plomería y domótica a domicilio. Presupuesto sin cargo.">
+<link rel="canonical" href="https://bonaelectricidad.com.ar/">
+<meta name="theme-color" content="#1c2321">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%231c2321'/%3E%3Cpath d='M58 4 L22 54 H44 L36 96 L80 42 H56 L58 4Z' fill='%23b5651d'/%3E%3C/svg%3E">
 
 <meta property="og:type" content="website">
+<meta property="og:url" content="https://bonaelectricidad.com.ar/">
 <meta property="og:title" content="BONA Electricidad — Electricista matriculado zona norte GBA">
 <meta property="og:description" content="Instalaciones, reparaciones, plomería y domótica a domicilio. La Lucila, Martínez, Olivos, Vicente López. Presupuesto sin cargo.">
-<meta property="og:image" content="https://guardvalker.github.io/bona-landing/og-image.png">
+<meta property="og:image" content="https://bonaelectricidad.com.ar/og-image.png">
 <meta property="og:locale" content="es_AR">
+<meta name="twitter:card" content="summary_large_image">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Electrician",
+  "name": "BONA Electricidad",
+  "image": "https://bonaelectricidad.com.ar/og-image.png",
+  "url": "https://bonaelectricidad.com.ar/",
+  "telephone": "+5491130147081",
+  "email": "gonzalo.bonavena@pm.me",
+  "priceRange": "$$",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "La Lucila",
+    "addressRegion": "Buenos Aires",
+    "addressCountry": "AR"
+  },
+  "areaServed": ["La Lucila", "Martínez", "Olivos", "Vicente López"],
+  "sameAs": ["https://instagram.com/gonzalo.bonavena"],
+  "description": "Electricista matriculado COPIME N3. Instalaciones eléctricas, reparaciones y urgencias, plomería y domótica a domicilio en zona norte del GBA."
+}
+</script>
 
 <style>
   :root {
-    --bg: #EFE9DD;
-    --accent: #B08D57;
-    --accent2: #C9A876;
-    --text: #5C4326;
-    --text2: #6B4A2B;
-    --text-sec: #8A6D45;
-    --text-sec2: #A08858;
+    --paper: #F2EFE6;
+    --paper-soft: #E8E3D5;
+    --ink: #1C2321;
+    --ink-2: #262F2C;
+    --copper: #B5651D;
+    --copper-light: #D98A4D;
+    --copper-deep: #8A4A13;
+    --slate: #3D4A47;
+    --paper-muted: #C7C2B0;
   }
 
   * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
 
   html, body {
     margin: 0;
     padding: 0;
-    background: var(--bg);
-    color: var(--text);
+    background: var(--paper);
+    color: var(--ink);
     font-family: 'Courier New', monospace;
   }
 
-  body {
-    max-width: 680px;
-    margin: 0 auto;
-    padding: 0 1.25rem;
+  body { padding-bottom: 60px; } /* espacio para la barra sticky mobile */
+
+  a { color: inherit; }
+  img { max-width: 100%; }
+  .max { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+
+  h1, h2, h3 { font-weight: normal; margin: 0; }
+
+  /* --- Nav --- */
+  nav {
+    background: var(--ink);
+    color: var(--paper);
+    position: sticky;
+    top: 0;
+    z-index: 20;
   }
 
-  h1, h2 {
-    font-weight: normal;
-    margin: 0;
+  nav .max {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 24px;
   }
 
-  section {
-    padding: 2rem 0;
-    border-bottom: 1px dashed var(--accent2);
-  }
+  .brand { display: flex; align-items: center; gap: 10px; font-size: 1.2rem; letter-spacing: 0.1em; }
 
-  section:last-of-type {
-    border-bottom: none;
-  }
-
-  /* --- Header / Hero --- */
-  header {
-    padding: 2.5rem 0 2rem;
-    text-align: center;
-    border-bottom: 2px solid var(--accent);
-  }
-
-  header h1 {
-    font-size: 3rem;
-    letter-spacing: 0.35em;
-    padding-left: 0.35em; /* balance the trailing letter-spacing */
-    color: var(--text2);
-  }
-
-  .subtitulo {
-    margin-top: 0.75rem;
-    font-size: 0.95rem;
-    letter-spacing: 0.08em;
-    color: var(--text-sec);
-  }
-
-  .zona-linea {
-    margin-top: 0.5rem;
-    font-size: 0.85rem;
-    color: var(--text-sec2);
-  }
-
-  /* --- Pitch + CTA --- */
-  .pitch {
-    text-align: center;
-  }
-
-  .pitch p {
-    font-size: 1rem;
-    line-height: 1.5;
-    margin: 0 0 1.5rem;
-  }
-
-  .cta-whatsapp {
-    display: inline-flex;
+  .brand .mark {
+    width: 28px;
+    height: 28px;
+    background: var(--ink);
+    border: 1px solid var(--copper-light);
+    display: flex;
     align-items: center;
     justify-content: center;
-    gap: 0.6rem;
-    width: 100%;
-    background: var(--text2);
-    color: var(--bg);
-    text-decoration: none;
-    font-family: inherit;
-    font-size: 1.05rem;
-    letter-spacing: 0.05em;
-    padding: 1rem 1.25rem;
-    border: 1px solid var(--text2);
-  }
-
-  .cta-whatsapp:active {
-    background: var(--text);
-  }
-
-  .cta-whatsapp svg {
-    width: 22px;
-    height: 22px;
     flex-shrink: 0;
   }
 
-  /* --- Servicios --- */
-  h2 {
-    font-size: 1.1rem;
-    letter-spacing: 0.12em;
-    color: var(--text2);
-    border-bottom: 1px solid var(--accent2);
-    padding-bottom: 0.5rem;
-    margin-bottom: 1.25rem;
-  }
+  .brand .mark svg { width: 16px; height: 16px; }
+  .brand .a { color: var(--copper-light); }
 
-  .servicios-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1.25rem;
-  }
+  nav .links { display: flex; gap: 24px; font-size: 0.8rem; letter-spacing: 0.05em; }
+  nav .links a { text-decoration: none; opacity: 0.85; }
+  nav .links a:hover { opacity: 1; color: var(--copper-light); }
 
-  @media (max-width: 420px) {
-    .servicios-grid { grid-template-columns: 1fr; }
-  }
+  @media (max-width: 700px) { nav .links { display: none; } }
 
-  .servicio {
-    border: 1px solid var(--accent2);
-    padding: 1rem;
-  }
-
-  .servicio .icono {
-    width: 28px;
-    height: 28px;
-    color: var(--accent);
-    margin-bottom: 0.5rem;
-  }
-
-  .servicio h3 {
-    font-size: 0.95rem;
-    margin: 0 0 0.4rem;
-    color: var(--text2);
-    font-weight: normal;
-  }
-
-  .servicio p {
-    font-size: 0.82rem;
-    color: var(--text-sec);
-    margin: 0;
-    line-height: 1.4;
-  }
-
-  /* --- SEO texto --- */
-  .seo-texto p {
-    font-size: 0.9rem;
-    line-height: 1.7;
-    color: var(--text2);
-  }
-
-  /* --- Trabajos / galería --- */
-  .galeria {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 0.6rem;
-  }
-
-  @media (max-width: 420px) {
-    .galeria { grid-template-columns: 1fr 1fr; }
-  }
-
-  .galeria img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-  }
-
-  /* --- Zona de cobertura --- */
-  .zona-lista {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    font-size: 0.9rem;
-  }
-
-  .zona-lista li {
-    padding: 0.5rem 0;
-    border-bottom: 1px dashed var(--accent2);
-    color: var(--text2);
-  }
-
-  .zona-lista li:last-child {
-    border-bottom: none;
-  }
-
-  .zona-lista li::before {
-    content: "// ";
-    color: var(--accent);
-  }
-
-  /* --- Footer --- */
-  footer {
-    padding: 2rem 0 3rem;
-    text-align: center;
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-family: inherit;
+    text-decoration: none;
+    letter-spacing: 0.05em;
     font-size: 0.85rem;
   }
 
-  footer .matricula {
-    letter-spacing: 0.1em;
-    color: var(--text-sec);
-    margin-bottom: 0.75rem;
+  .btn-primary {
+    background: var(--copper);
+    color: var(--paper);
+    padding: 0.85rem 1.4rem;
+    border: 1px solid var(--copper);
+  }
+  .btn-primary:active { background: var(--copper-deep); border-color: var(--copper-deep); }
+
+  .btn-secondary {
+    background: transparent;
+    color: var(--ink);
+    border: 1px solid var(--ink);
+    padding: 0.8rem 1.35rem;
   }
 
-  footer .contacto-links {
-    display: flex;
-    flex-direction: column;
-    gap: 0.4rem;
-    margin-bottom: 1.5rem;
-    color: var(--text2);
+  .nav-cta { padding: 0.55rem 1rem; font-size: 0.78rem; }
+
+  .btn svg { width: 18px; height: 18px; flex-shrink: 0; }
+
+  /* --- Hero --- */
+  .hero {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 40px;
+    align-items: center;
+    padding: 56px 0;
+  }
+  @media (max-width: 860px) { .hero { grid-template-columns: 1fr; padding: 40px 0; } }
+
+  .eyebrow {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: bold;
+    letter-spacing: 0.12em;
+    color: var(--copper-deep);
+    border: 1px solid var(--copper);
+    padding: 0.35rem 0.7rem;
+    margin-bottom: 1.1rem;
   }
 
-  footer .contacto-links a {
-    color: var(--text2);
-    text-decoration: none;
-    border-bottom: 1px dotted var(--accent);
+  .hero h1 {
+    font-size: clamp(1.9rem, 4.2vw, 2.7rem);
+    line-height: 1.2;
+    margin: 0 0 1rem;
   }
+  .hero h1 .accent { color: var(--copper); }
+
+  .hero p.lead {
+    font-size: 0.95rem;
+    color: var(--slate);
+    line-height: 1.6;
+    max-width: 440px;
+    margin: 0 0 1.6rem;
+  }
+
+  .hero-ctas { display: flex; gap: 0.8rem; flex-wrap: wrap; }
+
+  .hero-visual {
+    position: relative;
+    aspect-ratio: 4 / 5;
+    background: var(--ink);
+    overflow: hidden;
+  }
+  .hero-visual img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.92;
+  }
+  .hero-visual .tag {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    background: var(--copper);
+    color: var(--paper);
+    font-size: 0.72rem;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    padding: 0.4rem 0.7rem;
+  }
+  .hero-visual .caption {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    background: linear-gradient(transparent, rgba(28,35,33,0.9));
+    color: var(--paper-muted);
+    font-size: 0.72rem;
+    padding: 1.6rem 0.9rem 0.7rem;
+  }
+
+  /* --- Trust bar --- */
+  .trust { background: var(--ink-2); color: var(--paper); padding: 14px 0; }
+  .trust .max {
+    display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px;
+    font-size: 0.75rem; letter-spacing: 0.03em;
+  }
+  .trust .item { display: flex; align-items: center; gap: 0.5rem; }
+  .trust .item svg { width: 15px; height: 15px; stroke: var(--copper-light); flex-shrink: 0; }
+
+  /* --- Section shared --- */
+  section { padding: 3.2rem 0; }
+  .section-label {
+    font-size: 0.72rem; font-weight: bold; letter-spacing: 0.15em;
+    color: var(--copper); margin-bottom: 0.6rem;
+  }
+  h2 { font-size: clamp(1.3rem, 2.6vw, 1.7rem); margin-bottom: 1.8rem; max-width: 30em; line-height: 1.3; }
+
+  /* --- Servicios --- */
+  .grid-servicios {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2px;
+    background: var(--ink);
+  }
+  @media (max-width: 860px) { .grid-servicios { grid-template-columns: repeat(2, 1fr); } }
+
+  .card-servicio { background: var(--paper); padding: 1.5rem 1.2rem; }
+  .card-servicio .icon {
+    width: 40px; height: 40px;
+    background: var(--ink);
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 1rem;
+  }
+  .card-servicio .icon svg { width: 20px; height: 20px; }
+  .card-servicio h3 { font-size: 0.95rem; margin: 0 0 0.4rem; }
+  .card-servicio p { font-size: 0.8rem; color: var(--slate); margin: 0; line-height: 1.5; }
+
+  /* --- SEO texto --- */
+  .seo-texto { background: var(--paper-soft); }
+  .seo-texto p { font-size: 0.88rem; line-height: 1.7; color: var(--slate); max-width: 60em; }
+
+  /* --- Trabajos --- */
+  .fotos { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  @media (max-width: 700px) { .fotos { grid-template-columns: 1fr; } }
+  .foto { position: relative; aspect-ratio: 4 / 3; overflow: hidden; background: var(--ink); }
+  .foto img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .foto .label {
+    position: absolute; bottom: 0; left: 0; right: 0;
+    background: rgba(28,35,33,0.82); color: var(--paper);
+    font-size: 0.72rem; padding: 0.55rem 0.7rem;
+  }
+
+  /* --- Cobertura --- */
+  .cobertura { background: var(--ink); color: var(--paper); }
+  .cobertura .max { display: flex; align-items: center; gap: 32px; flex-wrap: wrap; justify-content: space-between; }
+  .cobertura-left { max-width: 420px; }
+  .cobertura h2 { color: var(--paper); margin-bottom: 0.6rem; }
+  .cobertura p { font-size: 0.85rem; color: var(--paper-muted); margin: 0; line-height: 1.6; }
+  .zonas { display: flex; gap: 0.6rem; flex-wrap: wrap; }
+  .zona { border: 1px solid var(--copper-light); color: var(--copper-light); padding: 0.5rem 0.9rem; font-size: 0.8rem; font-weight: bold; }
+
+  /* --- Contacto --- */
+  .contacto-box {
+    background: var(--ink); color: var(--paper);
+    display: grid; grid-template-columns: 1.2fr 1fr;
+    padding: 2.4rem;
+  }
+  @media (max-width: 780px) { .contacto-box { grid-template-columns: 1fr; padding: 1.8rem 1.4rem; gap: 1.8rem; } }
+  .contacto-box h2 { color: var(--paper); max-width: 20em; margin-bottom: 0.9rem; }
+  .contacto-box p { color: var(--paper-muted); font-size: 0.85rem; margin: 0 0 1.4rem; max-width: 24em; line-height: 1.6; }
+  .contacto-info { border-left: 1px solid #444; padding-left: 2rem; }
+  @media (max-width: 780px) { .contacto-info { border-left: none; padding-left: 0; border-top: 1px solid #444; padding-top: 1.6rem; } }
+  .contacto-info .label { font-size: 0.68rem; letter-spacing: 0.1em; color: var(--copper-light); font-weight: bold; margin-bottom: 0.4rem; }
+  .contacto-info .tel { font-size: 1.7rem; margin-bottom: 1rem; }
+  .contacto-info .tel a { text-decoration: none; color: var(--paper); }
+  .contacto-info .row { font-size: 0.8rem; color: var(--paper-muted); margin-bottom: 0.6rem; display: flex; gap: 0.5rem; align-items: center; }
+  .contacto-info .row a { color: var(--paper-muted); text-decoration: none; border-bottom: 1px dotted var(--copper-light); }
+  .contacto-info .row svg { width: 14px; height: 14px; stroke: var(--copper-light); flex-shrink: 0; }
+
+  /* --- Footer --- */
+  footer { text-align: center; font-size: 0.75rem; color: var(--slate); padding: 1.6rem; border-top: 1px solid var(--paper-soft); }
+
+  /* --- Sticky mobile bar --- */
+  .sticky-bar {
+    display: none;
+    position: fixed; bottom: 0; left: 0; right: 0; z-index: 30;
+    background: var(--copper); color: var(--paper);
+    text-align: center; padding: 1rem; font-weight: bold; font-size: 0.85rem;
+    text-decoration: none; letter-spacing: 0.03em;
+  }
+  @media (max-width: 700px) { .sticky-bar { display: block; } }
 </style>
 </head>
 <body>
 
-<header>
-  <h1>BONA</h1>
-  <p class="subtitulo">ELECTRICIDAD · PLOMERÍA · DOMÓTICA</p>
-  <p class="zona-linea">La Lucila · Martínez · Olivos · Vicente López</p>
-</header>
-
-<section class="pitch">
-  <p>Electricista matriculado COPIME N3 — Trabajos residenciales en zona norte</p>
-  <a class="cta-whatsapp" href="https://wa.me/5491130147081" target="_blank" rel="noopener">
-    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.472-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.29.173-1.414-.074-.124-.272-.198-.57-.347z"/><path d="M12.004 2c-5.514 0-9.99 4.475-9.99 9.99 0 1.76.462 3.484 1.34 5.003L2 22l5.117-1.341a9.96 9.96 0 0 0 4.887 1.246h.004c5.514 0 9.99-4.475 9.99-9.989 0-2.669-1.04-5.176-2.927-7.062A9.929 9.929 0 0 0 12.004 2zm5.844 15.833c-.247.696-1.436 1.362-1.98 1.443-.507.076-1.15.108-1.856-.117-.428-.135-.978-.315-1.682-.617-2.96-1.277-4.893-4.245-5.041-4.443-.148-.198-1.212-1.612-1.212-3.074 0-1.463.767-2.182 1.04-2.479.272-.297.594-.372.792-.372.198 0 .397.002.57.01.181.01.427-.069.669.51.247.595.841 2.058.916 2.207.075.149.124.322.025.52-.1.199-.149.323-.298.497-.148.173-.312.387-.446.52-.148.148-.303.309-.13.606.173.298.77 1.271 1.653 2.059 1.135 1.012 2.093 1.325 2.39 1.475.297.148.471.124.644-.075.173-.198.743-.867.94-1.164.198-.298.397-.249.67-.15.272.1 1.733.818 2.03.967.297.149.495.223.57.347.074.124.074.72-.174 1.414z"/></svg>
-    ESCRIBIME POR WHATSAPP
-  </a>
-</section>
-
-<section id="servicios">
-  <h2>SERVICIOS</h2>
-  <div class="servicios-grid">
-    <div class="servicio">
-      <svg class="icono" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 2 3 14h7l-1 8 10-12h-7l1-8z"/></svg>
-      <h3>Instalaciones eléctricas</h3>
-      <p>Tableros, disyuntores, puesta a tierra.</p>
+<nav>
+  <div class="max">
+    <div class="brand">
+      <span class="mark">
+        <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M58 4 L22 54 H44 L36 96 L80 42 H56 L58 4Z" fill="#D98A4D"/>
+        </svg>
+      </span>
+      BON<span class="a">A</span>
     </div>
-    <div class="servicio">
-      <svg class="icono" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2 2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
-      <h3>Reparaciones y urgencias</h3>
-      <p>Cortocircuitos, disyuntor saltado, fallas urgentes.</p>
+    <div class="links">
+      <a href="#servicios">Servicios</a>
+      <a href="#trabajos">Trabajos</a>
+      <a href="#zona">Zona</a>
+      <a href="#contacto">Contacto</a>
     </div>
-    <div class="servicio">
-      <svg class="icono" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 3h16v4H4z"/><path d="M8 7v14"/><path d="M16 7v6a4 4 0 0 1-8 0"/></svg>
-      <h3>Plomería</h3>
-      <p>Pérdidas, canillas, cañerías, destapaciones.</p>
-    </div>
-    <div class="servicio">
-      <svg class="icono" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg>
-      <h3>Domótica / smart home</h3>
-      <p>Iluminación y accesos controlados desde el celular.</p>
-    </div>
+    <a class="btn btn-primary nav-cta" href="https://wa.me/5491130147081" target="_blank" rel="noopener">WhatsApp</a>
   </div>
-</section>
+</nav>
+
+<div class="max">
+  <section class="hero">
+    <div>
+      <div class="eyebrow">MAT. COPIME N3 · CABA</div>
+      <h1>Trabajo de confianza,<br><span class="accent">sin vueltas.</span></h1>
+      <p class="lead">Gonzalo Bonavena, electricista matriculado con base en La Lucila. Instalaciones, reparaciones, plomería y domótica a domicilio en zona norte del GBA. Presupuesto sin cargo antes de arrancar.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-primary" href="https://wa.me/5491130147081" target="_blank" rel="noopener">Escribime por WhatsApp →</a>
+        <a class="btn btn-secondary" href="#servicios">Ver servicios</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <img src="fotos/tablero-conexiones.jpg" alt="Armado y conexionado de caja eléctrica embutida en pared, trabajo de BONA Electricidad">
+      <div class="tag">Trabajo en La Lucila</div>
+      <div class="caption">Tablero embutido — instalación reciente</div>
+    </div>
+  </section>
+</div>
+
+<div class="trust">
+  <div class="max">
+    <div class="item"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg>Matriculado COPIME N3</div>
+    <div class="item"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>Respuesta rápida</div>
+    <div class="item"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M4 12a8 4 0 0 0 16 0"/><path d="M4 12a8 4 0 0 1 16 0"/></svg>Presupuesto sin cargo</div>
+    <div class="item"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M3 11l9-8 9 8v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>Zona norte GBA</div>
+  </div>
+</div>
+
+<div class="max">
+  <section id="servicios">
+    <div class="section-label">SERVICIOS</div>
+    <h2>Todo lo que tu casa necesita, de un solo llamado.</h2>
+    <div class="grid-servicios">
+      <div class="card-servicio">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="#D98A4D" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8z"/></svg></div>
+        <h3>Instalaciones eléctricas</h3>
+        <p>Tableros, disyuntores, puesta a tierra, cableado nuevo.</p>
+      </div>
+      <div class="card-servicio">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="#D98A4D" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 2 20h20L12 3z"/><path d="M12 9.5v4.5"/><circle cx="12" cy="17" r="0.6" fill="#D98A4D"/></svg></div>
+        <h3>Reparaciones y urgencias</h3>
+        <p>Cortocircuitos, disyuntor saltado, fallas urgentes.</p>
+      </div>
+      <div class="card-servicio">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="#D98A4D" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15c2-6 4-9 8-9s6 3 8 9"/><path d="M3 15h18l-1.5 5h-15z" stroke-linejoin="round"/></svg></div>
+        <h3>Plomería</h3>
+        <p>Pérdidas, canillas, cañerías, destapaciones.</p>
+      </div>
+      <div class="card-servicio">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="#D98A4D" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="8" r="3.6"/><path d="M9 20c0-3 1.5-5 3-5s3 2 3 5"/><path d="M3 12h2M19 12h2M5 5l1.5 1.5M17.5 6.5L19 5"/></svg></div>
+        <h3>Domótica / smart home</h3>
+        <p>Iluminación y accesos controlados desde el celular.</p>
+      </div>
+    </div>
+  </section>
+</div>
 
 <section class="seo-texto">
-  <p>
-    BONA es el servicio de electricidad de Gonzalo Bonavena, electricista
-    matriculado COPIME Nivel 3, con base en La Lucila y cobertura en Martínez,
-    Olivos y Vicente López. Trabajos de instalación, reparación, plomería y
-    domótica a domicilio, con presupuesto sin cargo antes de arrancar.
-  </p>
-</section>
-
-<section id="trabajos">
-  <h2>TRABAJOS REALIZADOS</h2>
-  <div class="galeria">
-    <img src="fotos/tablero-conexiones.jpg" alt="Armado y conexionado de caja eléctrica embutida en pared">
-    <img src="fotos/medicion-tablero.jpg" alt="Medición con pinza amperométrica en tablero eléctrico">
-    <img src="fotos/domicilio-dormitorio.jpg" alt="Revisión eléctrica a domicilio en dormitorio">
+  <div class="max">
+    <p>
+      BONA es el servicio de electricidad de Gonzalo Bonavena, electricista
+      matriculado COPIME Nivel 3, con base en La Lucila y cobertura en Martínez,
+      Olivos y Vicente López. Trabajos de instalación, reparación, plomería y
+      domótica a domicilio, con presupuesto sin cargo antes de arrancar.
+    </p>
   </div>
 </section>
 
-<section id="zona">
-  <h2>ZONA DE COBERTURA</h2>
-  <ul class="zona-lista">
-    <li>La Lucila</li>
-    <li>Martínez</li>
-    <li>Olivos</li>
-    <li>Vicente López</li>
-  </ul>
+<div class="max">
+  <section id="trabajos">
+    <div class="section-label">TRABAJOS REALIZADOS</div>
+    <h2>Algunos trabajos recientes en zona norte.</h2>
+    <div class="fotos">
+      <div class="foto">
+        <img src="fotos/tablero-conexiones.jpg" alt="Armado y conexionado de caja eléctrica embutida en pared">
+        <div class="label">Tablero embutido — La Lucila</div>
+      </div>
+      <div class="foto">
+        <img src="fotos/medicion-tablero.jpg" alt="Medición con pinza amperométrica en tablero eléctrico">
+        <div class="label">Medición con pinza amperométrica</div>
+      </div>
+      <div class="foto">
+        <img src="fotos/domicilio-dormitorio.jpg" alt="Revisión eléctrica a domicilio en dormitorio">
+        <div class="label">Revisión eléctrica a domicilio</div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<section class="cobertura" id="zona">
+  <div class="max">
+    <div class="cobertura-left">
+      <h2>Zona de cobertura</h2>
+      <p>Trabajo en zona norte del GBA con base en La Lucila. Coordino visita el mismo día en la mayoría de los casos.</p>
+    </div>
+    <div class="zonas">
+      <div class="zona">La Lucila</div>
+      <div class="zona">Martínez</div>
+      <div class="zona">Olivos</div>
+      <div class="zona">Vicente López</div>
+    </div>
+  </div>
 </section>
 
-<footer>
-  <p class="matricula">COPIME N3 · CABA</p>
-  <div class="contacto-links">
-    <a href="https://instagram.com/gonzalo.bonavena" target="_blank" rel="noopener">@gonzalo.bonavena</a>
-    <span>+11 3014 7081</span>
-  </div>
-  <a class="cta-whatsapp" href="https://wa.me/5491130147081" target="_blank" rel="noopener">
-    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.472-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.29.173-1.414-.074-.124-.272-.198-.57-.347z"/><path d="M12.004 2c-5.514 0-9.99 4.475-9.99 9.99 0 1.76.462 3.484 1.34 5.003L2 22l5.117-1.341a9.96 9.96 0 0 0 4.887 1.246h.004c5.514 0 9.99-4.475 9.99-9.989 0-2.669-1.04-5.176-2.927-7.062A9.929 9.929 0 0 0 12.004 2zm5.844 15.833c-.247.696-1.436 1.362-1.98 1.443-.507.076-1.15.108-1.856-.117-.428-.135-.978-.315-1.682-.617-2.96-1.277-4.893-4.245-5.041-4.443-.148-.198-1.212-1.612-1.212-3.074 0-1.463.767-2.182 1.04-2.479.272-.297.594-.372.792-.372.198 0 .397.002.57.01.181.01.427-.069.669.51.247.595.841 2.058.916 2.207.075.149.124.322.025.52-.1.199-.149.323-.298.497-.148.173-.312.387-.446.52-.148.148-.303.309-.13.606.173.298.77 1.271 1.653 2.059 1.135 1.012 2.093 1.325 2.39 1.475.297.148.471.124.644-.075.173-.198.743-.867.94-1.164.198-.298.397-.249.67-.15.272.1 1.733.818 2.03.967.297.149.495.223.57.347.074.124.074.72-.174 1.414z"/></svg>
-    ESCRIBIME POR WHATSAPP
-  </a>
-</footer>
+<div class="max">
+  <section id="contacto">
+    <div class="contacto-box">
+      <div>
+        <h2>¿Tenés una duda rápida o necesitás presupuesto?</h2>
+        <p>Escribime por WhatsApp y te respondo a la brevedad. También coordino videollamada si querés mostrarme el problema antes de la visita.</p>
+        <a class="btn btn-primary" href="https://wa.me/5491130147081" target="_blank" rel="noopener">Escribime por WhatsApp →</a>
+      </div>
+      <div class="contacto-info">
+        <div class="label">LLAMADA DIRECTA / WHATSAPP</div>
+        <div class="tel"><a href="tel:+5491130147081">11 3014-7081</a></div>
+        <div class="row"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M4 4h16v16H4z"/><path d="M4 6l8 7 8-7"/></svg><a href="mailto:gonzalo.bonavena@pm.me">gonzalo.bonavena@pm.me</a></div>
+        <div class="row"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/></svg><a href="https://instagram.com/gonzalo.bonavena" target="_blank" rel="noopener">@gonzalo.bonavena</a></div>
+        <div class="row"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M3 11l9-8 9 8v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>La Lucila, Buenos Aires</div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<footer>BONA Electricidad · Gonzalo Bonavena · Matriculado COPIME N3 CABA · La Lucila, Martínez, Olivos, Vicente López</footer>
+
+<a class="sticky-bar" href="https://wa.me/5491130147081" target="_blank" rel="noopener">Escribime por WhatsApp — 11 3014-7081</a>
 
 </body>
 </html>
