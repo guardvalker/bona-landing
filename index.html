@@ -291,9 +291,127 @@
 
   /* --- Footer --- */
   footer { text-align: center; font-size: 0.75rem; color: var(--slate); padding: 1.6rem; border-top: 1px solid var(--paper-soft); }
+
+  /* --- Cableado decorativo --- */
+  .wire-rail {
+    display: none;
+    position: fixed;
+    top: 0; left: 22px;
+    width: 56px; height: 100vh;
+    z-index: 5;
+    pointer-events: none;
+  }
+  @media (min-width: 1300px) { .wire-rail { display: block; } }
+
+  .wire-rail svg { width: 100%; height: 100%; overflow: visible; }
+
+  .wire-trunk {
+    fill: none;
+    stroke: var(--copper);
+    stroke-width: 1.6;
+    stroke-linecap: round;
+    stroke-opacity: 0.55;
+    transition: stroke-dashoffset 0.1s linear;
+  }
+
+  .wire-branch .branch-line {
+    fill: none;
+    stroke: var(--copper);
+    stroke-width: 1.6;
+    stroke-linecap: round;
+    stroke-opacity: 0.8;
+    transition: stroke-dashoffset 0.6s ease;
+  }
+  .wire-branch.is-active .branch-line { stroke-dashoffset: 0 !important; }
+
+  .wire-branch .switch-glyph {
+    stroke: var(--copper-light);
+    fill: var(--copper-light);
+    opacity: 0;
+    transform-box: fill-box;
+    transform-origin: center;
+    transform: scale(0.5);
+    transition: opacity 0.4s ease 0.25s, transform 0.4s ease 0.25s;
+  }
+  .wire-branch.is-active .switch-glyph { opacity: 1; transform: scale(1); }
+
+  @media (prefers-reduced-motion: reduce) {
+    .wire-trunk, .wire-branch .branch-line, .wire-branch .switch-glyph { transition: none; }
+  }
 </style>
 </head>
 <body>
+
+<div class="wire-rail" aria-hidden="true">
+  <svg viewBox="0 0 60 100" preserveAspectRatio="none">
+    <path class="wire-trunk" d="M30,0 C30,10 20,10 20,20 C20,30 40,30 40,40 C40,50 20,50 20,60 C20,70 40,70 40,80 C40,90 30,90 30,100" />
+
+    <g class="wire-branch" data-threshold="0.08">
+      <path class="branch-line" d="M25,11 L52,11" />
+      <g class="switch-glyph" transform="translate(52,11)">
+        <circle cx="-6" cy="4.5" r="1.4" stroke-width="1.3" fill="none"/>
+        <line x1="-6" y1="4.5" x2="-1.5" y2="-4" stroke-width="1.3"/>
+        <circle cx="-1.5" cy="-4.5" r="1" stroke-width="1.1" fill="none"/>
+        <circle cx="4" cy="4.5" r="1.4" stroke-width="1.3" fill="none"/>
+        <line x1="4" y1="4.5" x2="8.5" y2="-4" stroke-width="1.3"/>
+        <circle cx="8.5" cy="-4.5" r="1" stroke-width="1.1" fill="none"/>
+        <line x1="-6" y1="4.5" x2="4" y2="4.5" stroke-width="1" stroke-dasharray="1.2 1.6"/>
+      </g>
+    </g>
+
+    <g class="wire-branch" data-threshold="0.26">
+      <path class="branch-line" d="M30,31 L8,31" />
+      <g class="switch-glyph" transform="translate(8,31) scale(-1,1)">
+        <circle cx="-6" cy="4.5" r="1.4" stroke-width="1.3" fill="none"/>
+        <line x1="-6" y1="4.5" x2="-1.5" y2="-4" stroke-width="1.3"/>
+        <circle cx="-1.5" cy="-4.5" r="1" stroke-width="1.1" fill="none"/>
+        <circle cx="4" cy="4.5" r="1.4" stroke-width="1.3" fill="none"/>
+        <line x1="4" y1="4.5" x2="8.5" y2="-4" stroke-width="1.3"/>
+        <circle cx="8.5" cy="-4.5" r="1" stroke-width="1.1" fill="none"/>
+        <line x1="-6" y1="4.5" x2="4" y2="4.5" stroke-width="1" stroke-dasharray="1.2 1.6"/>
+      </g>
+    </g>
+
+    <g class="wire-branch" data-threshold="0.46">
+      <path class="branch-line" d="M32,51 L52,51" />
+      <g class="switch-glyph" transform="translate(52,51)">
+        <circle cx="-6" cy="4.5" r="1.4" stroke-width="1.3" fill="none"/>
+        <line x1="-6" y1="4.5" x2="-1.5" y2="-4" stroke-width="1.3"/>
+        <circle cx="-1.5" cy="-4.5" r="1" stroke-width="1.1" fill="none"/>
+        <circle cx="4" cy="4.5" r="1.4" stroke-width="1.3" fill="none"/>
+        <line x1="4" y1="4.5" x2="8.5" y2="-4" stroke-width="1.3"/>
+        <circle cx="8.5" cy="-4.5" r="1" stroke-width="1.1" fill="none"/>
+        <line x1="-6" y1="4.5" x2="4" y2="4.5" stroke-width="1" stroke-dasharray="1.2 1.6"/>
+      </g>
+    </g>
+
+    <g class="wire-branch" data-threshold="0.66">
+      <path class="branch-line" d="M30,71 L8,71" />
+      <g class="switch-glyph" transform="translate(8,71) scale(-1,1)">
+        <circle cx="-6" cy="4.5" r="1.4" stroke-width="1.3" fill="none"/>
+        <line x1="-6" y1="4.5" x2="-1.5" y2="-4" stroke-width="1.3"/>
+        <circle cx="-1.5" cy="-4.5" r="1" stroke-width="1.1" fill="none"/>
+        <circle cx="4" cy="4.5" r="1.4" stroke-width="1.3" fill="none"/>
+        <line x1="4" y1="4.5" x2="8.5" y2="-4" stroke-width="1.3"/>
+        <circle cx="8.5" cy="-4.5" r="1" stroke-width="1.1" fill="none"/>
+        <line x1="-6" y1="4.5" x2="4" y2="4.5" stroke-width="1" stroke-dasharray="1.2 1.6"/>
+      </g>
+    </g>
+
+    <g class="wire-branch" data-threshold="0.84">
+      <path class="branch-line" d="M35,91 L52,91" />
+      <g class="switch-glyph" transform="translate(52,91)">
+        <circle cx="-6" cy="4.5" r="1.4" stroke-width="1.3" fill="none"/>
+        <line x1="-6" y1="4.5" x2="-1.5" y2="-4" stroke-width="1.3"/>
+        <circle cx="-1.5" cy="-4.5" r="1" stroke-width="1.1" fill="none"/>
+        <circle cx="4" cy="4.5" r="1.4" stroke-width="1.3" fill="none"/>
+        <line x1="4" y1="4.5" x2="8.5" y2="-4" stroke-width="1.3"/>
+        <circle cx="8.5" cy="-4.5" r="1" stroke-width="1.1" fill="none"/>
+        <line x1="-6" y1="4.5" x2="4" y2="4.5" stroke-width="1" stroke-dasharray="1.2 1.6"/>
+      </g>
+    </g>
+  </svg>
+</div>
 
 <nav>
   <div class="max">
@@ -442,6 +560,59 @@
 </div>
 
 <footer>BONA Electricidad · Matriculado COPIME N3 R004446 · GBA Zona Norte y CABA</footer>
+
+<script>
+(function () {
+  var trunk = document.querySelector('.wire-trunk');
+  var branches = document.querySelectorAll('.wire-branch');
+  if (!trunk || !branches.length) return;
+
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var trunkLen = trunk.getTotalLength();
+  trunk.style.strokeDasharray = trunkLen;
+
+  branches.forEach(function (branch) {
+    var line = branch.querySelector('.branch-line');
+    var len = line.getTotalLength();
+    line.style.strokeDasharray = len;
+    line.style.strokeDashoffset = len;
+  });
+
+  if (reduceMotion) {
+    trunk.style.strokeDashoffset = 0;
+    branches.forEach(function (b) { b.classList.add('is-active'); });
+    return;
+  }
+
+  var ticking = false;
+
+  function update() {
+    var maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+    var progress = maxScroll > 0 ? window.scrollY / maxScroll : 0;
+    if (progress < 0) progress = 0;
+    if (progress > 1) progress = 1;
+
+    trunk.style.strokeDashoffset = trunkLen * (1 - progress);
+
+    branches.forEach(function (branch) {
+      var threshold = parseFloat(branch.dataset.threshold);
+      branch.classList.toggle('is-active', progress >= threshold);
+    });
+
+    ticking = false;
+  }
+
+  window.addEventListener('scroll', function () {
+    if (!ticking) {
+      requestAnimationFrame(update);
+      ticking = true;
+    }
+  }, { passive: true });
+
+  window.addEventListener('resize', update);
+  update();
+})();
+</script>
 
 </body>
 </html>
