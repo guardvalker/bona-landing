@@ -1,7 +1,10 @@
 # BONA Electricidad — Landing page
 
+**App:** https://bonaelectricidad.com.ar
+
 Landing de una sola pantalla para BONA (Gonzalo Bonavena, electricista matriculado
-COPIME N3, zona norte GBA). Un solo archivo `index.html`, sin build step, pensada
+COPIME N3, zona norte GBA): presentación, galería de trabajos y contacto por
+WhatsApp/Instagram. Un solo archivo `index.html`, sin build step, pensada
 para GitHub Pages.
 
 ## Contenido pendiente de completar
