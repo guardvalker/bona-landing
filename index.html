@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>BONA Electricidad — Electricista matriculado en CABA y zona norte del GBA</title>
-<meta name="description" content="BONA — electricista matriculado COPIME N3. Instalaciones, reparaciones, plomería y domótica a domicilio en CABA y zona norte del GBA (La Lucila, Martínez, Olivos, Vicente López y alrededores).">
+<meta name="description" content="BONA — electricista matriculado COPIME N3. Instalaciones, reparaciones, plomería general y domótica a domicilio en CABA y zona norte del GBA (La Lucila, Martínez, Olivos, Vicente López y alrededores).">
 <link rel="canonical" href="https://bonaelectricidad.com.ar/">
 <meta name="theme-color" content="#1c2321">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%231c2321'/%3E%3Cpath d='M58 4 L22 54 H44 L36 96 L80 42 H56 L58 4Z' fill='%23b5651d'/%3E%3C/svg%3E">
@@ -12,7 +12,7 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://bonaelectricidad.com.ar/">
 <meta property="og:title" content="BONA Electricidad — Electricista matriculado CABA y zona norte GBA">
-<meta property="og:description" content="Instalaciones, reparaciones, plomería y domótica a domicilio en CABA y zona norte del GBA. La Lucila, Martínez, Olivos, Vicente López y alrededores.">
+<meta property="og:description" content="Instalaciones, reparaciones, plomería general y domótica a domicilio en CABA y zona norte del GBA. La Lucila, Martínez, Olivos, Vicente López y alrededores.">
 <meta property="og:image" content="https://bonaelectricidad.com.ar/og-image.png">
 <meta property="og:locale" content="es_AR">
 <meta name="twitter:card" content="summary_large_image">
@@ -35,8 +35,13 @@
     "addressCountry": "AR"
   },
   "areaServed": ["CABA", "Zona Norte GBA", "La Lucila", "Martínez", "Olivos", "Vicente López"],
-  "sameAs": ["https://instagram.com/gonzalo.bonavena"],
-  "description": "Electricista matriculado COPIME N3. Instalaciones eléctricas, reparaciones y urgencias, plomería y domótica a domicilio en CABA y zona norte del GBA."
+  "hasMap": "https://maps.app.goo.gl/2gQbgm3PseCFNXLS7",
+  "sameAs": [
+    "https://instagram.com/gonzalo.bonavena",
+    "https://www.facebook.com/gonza.bonavena/",
+    "https://maps.app.goo.gl/2gQbgm3PseCFNXLS7"
+  ],
+  "description": "Electricista matriculado COPIME N3. Instalaciones eléctricas, reparaciones y urgencias, plomería general y domótica a domicilio en CABA y zona norte del GBA."
 }
 </script>
 
@@ -262,6 +267,40 @@
     font-size: 0.72rem; padding: 0.55rem 0.7rem;
   }
 
+  /* --- Reviews de Google --- */
+  .reviews-google { margin-top: 2.4rem; border-top: 1px dashed var(--paper-muted); padding-top: 2.2rem; }
+  .reviews-header {
+    display: flex; justify-content: space-between; align-items: flex-end;
+    flex-wrap: wrap; gap: 1rem; margin-bottom: 1.4rem;
+  }
+  .google-badge { display: flex; align-items: center; gap: 0.7rem; }
+  .google-badge svg { width: 24px; height: 24px; flex-shrink: 0; }
+  .reviews-rating { font-size: 1rem; font-weight: bold; display: flex; align-items: baseline; gap: 0.5rem; }
+  .reviews-rating .stars { color: var(--copper); letter-spacing: 0.05em; font-size: 0.95rem; }
+  .reviews-count { font-size: 0.75rem; color: var(--slate); }
+  .reviews-link {
+    font-size: 0.78rem; text-decoration: none; color: var(--ink);
+    border-bottom: 1px dotted var(--copper); white-space: nowrap;
+  }
+  .reviews-link:hover { color: var(--copper); }
+
+  .reviews-track-wrap { overflow: hidden; position: relative; }
+  .reviews-track { display: flex; transition: transform 0.5s ease; }
+  .review-card { flex: 0 0 100%; background: var(--paper-soft); padding: 1.4rem 1.6rem; box-sizing: border-box; }
+  .review-card .r-head { display: flex; align-items: center; gap: 0.7rem; margin-bottom: 0.7rem; }
+  .review-card .r-avatar { width: 38px; height: 38px; object-fit: cover; background: var(--ink); flex-shrink: 0; }
+  .review-card .r-name { font-size: 0.85rem; font-weight: bold; }
+  .review-card .r-meta { font-size: 0.7rem; color: var(--slate); }
+  .review-card .r-stars { color: var(--copper); font-size: 0.85rem; margin-bottom: 0.5rem; }
+  .review-card .r-text { font-size: 0.85rem; line-height: 1.6; color: var(--ink); margin: 0; }
+
+  .reviews-dots { display: flex; justify-content: center; gap: 0.5rem; margin-top: 1rem; }
+  .reviews-dots button {
+    width: 8px; height: 8px; border: 1px solid var(--copper); background: transparent;
+    padding: 0; cursor: pointer;
+  }
+  .reviews-dots button.active { background: var(--copper); }
+
   /* --- Cobertura --- */
   .cobertura { background: var(--ink); color: var(--paper); }
   .cobertura .max { display: flex; align-items: center; gap: 32px; flex-wrap: wrap; justify-content: space-between; }
@@ -321,7 +360,7 @@
     <div>
       <div class="eyebrow">MAT. COPIME N3 R004446 · CABA</div>
       <h1>Trabajo de confianza,<br><span class="accent">sin vueltas.</span></h1>
-      <p class="lead">Electricista matriculado con base en La Lucila. Instalaciones, reparaciones, plomería y domótica a domicilio en CABA y zona norte del GBA.</p>
+      <p class="lead">Electricista matriculado. Instalaciones, reparaciones, plomería general y domótica a domicilio en CABA y zona norte del GBA.</p>
       <div class="hero-ctas">
         <a class="btn btn-primary" href="https://wa.me/5491130147081" target="_blank" rel="noopener">Escribime por WhatsApp →</a>
         <a class="btn btn-secondary" href="#servicios">Ver servicios</a>
@@ -361,7 +400,7 @@
       </div>
       <div class="card-servicio">
         <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="#D98A4D" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15c2-6 4-9 8-9s6 3 8 9"/><path d="M3 15h18l-1.5 5h-15z" stroke-linejoin="round"/></svg></div>
-        <h3>Plomería</h3>
+        <h3>Plomería general</h3>
         <p>Pérdidas, canillas, instalaciones.</p>
       </div>
       <div class="card-servicio">
@@ -377,9 +416,9 @@
   <div class="max">
     <p>
       BONA es tu handyman para el hogar: electricista matriculado COPIME
-      Nivel 3, con base en La Lucila y cobertura en CABA y toda la zona norte
-      del GBA (Martínez, Olivos, Vicente López y alrededores). Trabajos de
-      instalación, reparación, plomería y domótica a domicilio.
+      Nivel 3, con cobertura en CABA y toda la zona norte del GBA (La Lucila,
+      Martínez, Olivos, Vicente López y alrededores). Trabajos de
+      instalación, reparación, plomería general y domótica a domicilio.
     </p>
   </div>
 </section>
@@ -402,6 +441,25 @@
         <div class="label">Revisión eléctrica a domicilio</div>
       </div>
     </div>
+
+    <div class="reviews-google" id="reviewsGoogle">
+      <div class="reviews-header">
+        <div class="google-badge">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M23.52 12.27c0-.85-.08-1.66-.22-2.45H12v4.64h6.47c-.28 1.5-1.13 2.77-2.4 3.62v3h3.88c2.27-2.09 3.57-5.17 3.57-8.81z"/><path fill="#34A853" d="M12 24c3.24 0 5.96-1.07 7.95-2.92l-3.88-3c-1.08.72-2.45 1.15-4.07 1.15-3.13 0-5.78-2.11-6.73-4.96H1.27v3.11C3.25 21.3 7.31 24 12 24z"/><path fill="#FBBC05" d="M5.27 14.27A7.2 7.2 0 0 1 4.89 12c0-.79.14-1.56.38-2.27V6.62H1.27A11.98 11.98 0 0 0 0 12c0 1.94.46 3.77 1.27 5.38l4-3.11z"/><path fill="#EA4335" d="M12 4.77c1.77 0 3.35.61 4.6 1.8l3.44-3.44C17.95 1.19 15.24 0 12 0 7.31 0 3.25 2.7 1.27 6.62l4 3.11C6.22 6.88 8.87 4.77 12 4.77z"/></svg>
+          <div>
+            <div class="reviews-rating"><span class="stars" id="reviewsStars">★★★★★</span> <span id="reviewsScore">—</span></div>
+            <div class="reviews-count" id="reviewsCount">Cargando reseñas de Google…</div>
+          </div>
+        </div>
+        <a class="reviews-link" href="https://maps.app.goo.gl/2gQbgm3PseCFNXLS7" target="_blank" rel="noopener">Ver perfil en Google →</a>
+      </div>
+      <div class="reviews-track-wrap">
+        <div class="reviews-track" id="reviewsTrack">
+          <div class="review-card"><p class="r-text">Cargando reseñas…</p></div>
+        </div>
+      </div>
+      <div class="reviews-dots" id="reviewsDots"></div>
+    </div>
   </section>
 </div>
 
@@ -409,7 +467,7 @@
   <div class="max">
     <div class="cobertura-left">
       <h2>Zona de cobertura</h2>
-      <p>Trabajo en CABA y toda la zona norte del GBA, con base en La Lucila. Coordino visita el mismo día en la mayoría de los casos.</p>
+      <p>Trabajo en CABA y toda la zona norte del GBA. Coordino visita el mismo día en la mayoría de los casos.</p>
     </div>
     <div class="zonas">
       <div class="zona">CABA</div>
@@ -443,6 +501,127 @@
 </div>
 
 <footer>BONA Electricidad · Matriculado COPIME N3 R004446 · GBA Zona Norte y CABA</footer>
+
+<script>
+(function () {
+  var GOOGLE_API_KEY = 'PON_TU_API_KEY_ACA';
+  var GOOGLE_PLACE_ID = 'PON_TU_PLACE_ID_ACA';
+
+  if (!GOOGLE_API_KEY || GOOGLE_API_KEY.indexOf('PON_') === 0) return;
+  if (!GOOGLE_PLACE_ID || GOOGLE_PLACE_ID.indexOf('PON_') === 0) return;
+
+  var s = document.createElement('script');
+  s.src = 'https://maps.googleapis.com/maps/api/js?key=' + GOOGLE_API_KEY + '&libraries=places&callback=initGoogleReviews';
+  s.async = true;
+  document.head.appendChild(s);
+
+  window.initGoogleReviews = function () {
+    var service = new google.maps.places.PlacesService(document.createElement('div'));
+    service.getDetails(
+      { placeId: GOOGLE_PLACE_ID, fields: ['rating', 'user_ratings_total', 'reviews'] },
+      function (place, status) {
+        if (status !== google.maps.places.PlacesServiceStatus.OK || !place) return;
+        renderReviews(place);
+      }
+    );
+  };
+
+  function starString(rating) {
+    var full = Math.max(0, Math.min(5, Math.round(rating || 0)));
+    return '★'.repeat(full) + '☆'.repeat(5 - full);
+  }
+
+  function escapeHtml(str) {
+    var div = document.createElement('div');
+    div.textContent = str || '';
+    return div.innerHTML;
+  }
+
+  function renderReviews(place) {
+    var track = document.getElementById('reviewsTrack');
+    var dotsWrap = document.getElementById('reviewsDots');
+    var scoreEl = document.getElementById('reviewsScore');
+    var starsEl = document.getElementById('reviewsStars');
+    var countEl = document.getElementById('reviewsCount');
+    if (!track) return;
+
+    if (place.rating) {
+      scoreEl.textContent = place.rating.toFixed(1);
+      starsEl.textContent = starString(place.rating);
+    }
+    if (place.user_ratings_total) {
+      countEl.textContent = 'Basado en ' + place.user_ratings_total + ' reseñas de Google';
+    }
+
+    var reviews = (place.reviews || []).slice(0, 5);
+    if (!reviews.length) {
+      track.innerHTML = '<div class="review-card"><p class="r-text">Todavía no hay reseñas cargadas en Google. ¡Sé el primero en dejar la tuya!</p></div>';
+      dotsWrap.innerHTML = '';
+      return;
+    }
+
+    track.innerHTML = reviews.map(function (r) {
+      return (
+        '<div class="review-card">' +
+          '<div class="r-head">' +
+            '<img class="r-avatar" src="' + (r.profile_photo_url || '') + '" alt="' + escapeHtml(r.author_name) + '" loading="lazy">' +
+            '<div>' +
+              '<div class="r-name">' + escapeHtml(r.author_name) + '</div>' +
+              '<div class="r-meta">' + escapeHtml(r.relative_time_description) + '</div>' +
+            '</div>' +
+          '</div>' +
+          '<div class="r-stars">' + starString(r.rating) + '</div>' +
+          '<p class="r-text">' + escapeHtml(r.text) + '</p>' +
+        '</div>'
+      );
+    }).join('');
+
+    dotsWrap.innerHTML = reviews.map(function (_, i) {
+      return '<button aria-label="Reseña ' + (i + 1) + '" data-i="' + i + '"></button>';
+    }).join('');
+
+    var idx = 0;
+    var timer;
+
+    function goTo(i) {
+      idx = (i + reviews.length) % reviews.length;
+      track.style.transform = 'translateX(-' + (idx * 100) + '%)';
+      var dots = dotsWrap.querySelectorAll('button');
+      for (var d = 0; d < dots.length; d++) dots[d].classList.toggle('active', d === idx);
+    }
+    function next() { goTo(idx + 1); }
+    function start() { stop(); if (reviews.length > 1) timer = setInterval(next, 6000); }
+    function stop() { clearInterval(timer); }
+
+    var dotButtons = dotsWrap.querySelectorAll('button');
+    for (var b = 0; b < dotButtons.length; b++) {
+      dotButtons[b].addEventListener('click', (function (i) {
+        return function () { goTo(i); start(); };
+      })(b));
+    }
+
+    goTo(0);
+    start();
+    var wrap = document.getElementById('reviewsGoogle');
+    wrap.addEventListener('mouseenter', stop);
+    wrap.addEventListener('mouseleave', start);
+    wrap.addEventListener('touchstart', stop, { passive: true });
+
+    try {
+      var ld = document.querySelector('script[type="application/ld+json"]');
+      var data = JSON.parse(ld.textContent);
+      if (place.rating && place.user_ratings_total) {
+        data.aggregateRating = {
+          '@type': 'AggregateRating',
+          ratingValue: place.rating,
+          reviewCount: place.user_ratings_total
+        };
+        ld.textContent = JSON.stringify(data);
+      }
+    } catch (e) {}
+  }
+})();
+</script>
 
 </body>
 </html>
